@@ -263,12 +263,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490096066}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6e27b6c2fd857f42a4accf17d115651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphere: {fileID: 0}
+  sphere: {fileID: 490096071}
 --- !u!1 &1064454160
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,9 +526,25 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1819595420}
+        m_TargetAssemblyTypeName: PlayerInputScript, Assembly-CSharp
+        m_MethodName: OnKick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 33fcf08a-9672-4d6b-802a-7c9b02e8b4a4
     m_ActionName: 'charController/Kick[/Mouse/leftButton,/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: eb61f260-e972-4f23-a7a3-83b8781d8680
+    m_ActionName: 'charController/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: charController
