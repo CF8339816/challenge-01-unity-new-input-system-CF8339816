@@ -28,17 +28,6 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "57497ab7-5008-4cac-8708-d43d268da57a",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Kick",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "78cb24bb-73af-42bf-8c4e-fb9988cb39e1",
                     "path": "<Keyboard>/space",
                     "interactions": "",

@@ -29,24 +29,13 @@ public class PlayerInputHandler : MonoBehaviour
     {
         //if (context.started)
         //{
-            charging = true;
+           // charging = true;
             Debug.Log("kick charge started");
         //}
 
         //if (context.canceled)
         //{
-        //    if (kickforce < minkickforce)
-        //    {
-        //        kickforce = minkickforce;
-        //        Debug.Log("kick engaged");
-        //    }
-
-        //    if (kickforce > maxkickforce)
-        //    {
-        //        kickforce = maxkickforce;
-        //        Debug.Log("kick charge completed");
-        //    }
-
+            Debug.Log("kick charge completed");
         //}
     }
 
@@ -64,3 +53,27 @@ public class PlayerInputHandler : MonoBehaviour
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //    if (kickforce < minkickforce)
+            //    {
+            //        kickforce = minkickforce;
+            //        Debug.Log("kick engaged");
+            //    }
+
+            //    if (kickforce > maxkickforce)
+            //    {
+            //        kickforce = maxkickforce;
+            //    }
