@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,8 +11,8 @@ public class PlayerInputHandler : MonoBehaviour
     public float kickforce = 0f;
     public float minkickforce = 2f;
     public float maxkickforce = 10f;
-    public float kickforcechargerate = 0.01f;
-    bool charging = false;
+    public float kickforcecharging = .1f;
+    bool chargingKick = false;
 
 
     [Header("Move Values")]
@@ -47,58 +48,67 @@ public class PlayerInputHandler : MonoBehaviour
         if (context.started)
         {
 
-            charging = true;
-         
+            chargingKick = true;
+           // sphereRB.AddForce(direction * kickforce, ForceMode.Impulse);
+            Debug.Log("Kick started");
 
-            Debug.Log("Kick Started");
         }
 
         if (context.canceled)
         {
+           
+                sphereRB.AddForce(direction * kickforce, ForceMode.Impulse);
+                Debug.Log("Kick Canceled");
+           
 
-            sphereRB.AddForce(direction * kickforce, ForceMode.Impulse);
-            charging = false;
-            kickforce =  minkickforce;
-            Debug.Log("Kick Canceled");
+           chargingKick = false;
+           kickforce =  minkickforce;
+            
         }
 
-        else
-        {
-            Debug.Log("Shit done f@c%3d up!");
-
-
-        }
+       
     }
 
 
     public void OnScale()
     {
+        Vector3 currentScale = transform.localScale;
+
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-           basescale = basescale++ ;
+
+
+          // scale = Vector3(1 + basescale, 1 + basescale, 1 + basescale); 
 
             Debug.Log("'Eat Me...'  scale up");
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            basescale = basescale--;
+           
+
+            //currentScale -= Vector3.one * basescale ;
+
             Debug.Log("'Drink Me...' scale down");
         }
 
-        scale = scale * basescale;
+      // scale = scale * basescale;
     }
 
 
 
     public void Update()
     {
-                 
-        if (charging == true && kickforce <= maxkickforce)
+     
+
+        if (chargingKick == true  && kickforce <= maxkickforce)
         {
-            kickforce = kickforcechargerate;
+            kickforce = kickforcecharging++;
         }
-
-
+        else
+        {
+            kickforce = maxkickforce;
+        }
+      
     }
 
 
