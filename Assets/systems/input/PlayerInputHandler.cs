@@ -1,6 +1,7 @@
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class PlayerInputHandler : MonoBehaviour
 {
@@ -20,23 +21,29 @@ public class PlayerInputHandler : MonoBehaviour
     [SerializeField] Vector2 moveInput;
     public Vector2 movement = new Vector2(1f, 1f);
     public float movespeed = 2f;
-
+    public Transform moverCube;
 
     [Header("Change Scale")]
     public Rigidbody capsuleRB;
     public Vector3 scale = new Vector3(1f, 1f, 1f);
     public float basescale = 1f;
 
-
+    GameObject Capsuule;
 
 
     public void OnMove(InputAction.CallbackContext path)
     {
-        moveInput= path.ReadValue<Vector2>();
+        //moveInput= path.ReadValue<Vector2>();
 
-        cubeRB.AddForce(moveInput * movespeed, ForceMode.Impulse);
-      
-        Debug.Log("move input" + moveInput);   
+        //cubeRB.AddForce(moveInput * movespeed, ForceMode.Impulse);
+
+        //Debug.Log("move input" + moveInput);   
+
+        moveInput = path.ReadValue<Vector2>();
+
+        Debug.Log(moveInput.x);
+        Debug.Log(moveInput.y);
+
 
     }
 
@@ -98,7 +105,11 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void Update()
     {
-     
+     if(Keyboard.current.shiftKey.wasPressedThisFrame)
+        {
+            Debug.Log("I am a secret message for Sam TY for the additional Help !");
+            // scale.Capsule 
+        }
 
         if (chargingKick == true  && kickforce <= maxkickforce)
         {
@@ -109,6 +120,13 @@ public class PlayerInputHandler : MonoBehaviour
             kickforce = maxkickforce;
         }
       
+        if (moveInput!=Vector2.zero)
+            {
+            moverCube.Translate(new Vector3(moveInput.x,0,moveInput.y) * Time.deltaTime * 5f);
+
+        }
+
+
     }
 
 
