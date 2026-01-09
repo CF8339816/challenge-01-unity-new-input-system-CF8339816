@@ -269,8 +269,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereRB: {fileID: 0}
-  squareRB: {fileID: 0}
-  CapsuleRB: {fileID: 0}
+  direction: {x: 0, y: 1, z: 0.5}
+  kickforce: 10
+  minkickforce: 2
+  maxkickforce: 10
+  kickforcechargerate: 0.01
+  cubeRB: {fileID: 0}
+  moveInput: {x: 0, y: 0}
+  movement: {x: 1, y: 1}
+  movespeed: 2
+  capsuleRB: {fileID: 0}
+  scale: {x: 1, y: 1, z: 1}
+  basescale: 1
 --- !u!1 &746349669
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,28 +724,16 @@ MonoBehaviour:
         m_CallState: 0
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1819595420}
-        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
-        m_MethodName: OnKick
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 33fcf08a-9672-4d6b-802a-7c9b02e8b4a4
-    m_ActionName: 'charController/Kick[/Mouse/leftButton,/Keyboard/space]'
+      m_Calls: []
+    m_ActionId: 8698fd2f-a3d8-4cd7-a03b-81d822d768f8
+    m_ActionName: 'charController/Kick[/Keyboard/space]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: eb61f260-e972-4f23-a7a3-83b8781d8680
+    m_ActionId: 997836f9-ce78-4f98-8f3e-9c37e67cee9a
     m_ActionName: 'charController/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 086d2173-edc7-402f-958b-b6edb689b0d5
+    m_ActionId: dfa629b0-0809-4627-9c67-9292b916c050
     m_ActionName: 'charController/Scale[/Keyboard/upArrow,/Keyboard/downArrow]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
@@ -755,8 +753,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereRB: {fileID: 490096071}
-  squareRB: {fileID: 2140493076}
-  CapsuleRB: {fileID: 746349674}
+  direction: {x: 0, y: 1, z: 0.5}
+  kickforce: 10
+  minkickforce: 2
+  maxkickforce: 10
+  kickforcechargerate: 0.01
+  cubeRB: {fileID: 2140493076}
+  moveInput: {x: 0, y: 0}
+  movement: {x: 1, y: 1}
+  movespeed: 2
+  capsuleRB: {fileID: 746349674}
+  scale: {x: 1, y: 1, z: 1}
+  basescale: 1
 --- !u!4 &1819595421
 Transform:
   m_ObjectHideFlags: 0
