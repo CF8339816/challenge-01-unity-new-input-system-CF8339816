@@ -1,16 +1,27 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InputHandler : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    [SerializeField] PlayerInputHandler CharacterController;
+    
+    public InputAction moveAction;
+
+    public InputAction jumpAction;
+
+
+   
     void Start()
     {
+        moveAction = InputSystem.actions.FindAction("Move");  
         
+        jumpAction = InputSystem.actions.FindAction("Jump"); 
+        
+
+        Cursor.visible = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
 }
