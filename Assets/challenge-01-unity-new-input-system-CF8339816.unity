@@ -268,19 +268,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6e27b6c2fd857f42a4accf17d115651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphere: {fileID: 490096071}
-  direction: {x: 0, y: 1, z: 0.5}
-  kickforce: 0
-  minkickforce: 2
-  maxkickforce: 10
-  kickforcechargerate: 0.01
-  Cube: {fileID: 0}
-  movement: {x: 1, y: 1}
-  movespeed: 2
-  moveInput: {x: 0, y: 0}
-  Capsule: {fileID: 0}
-  scale: {x: 0, y: 0, z: 0}
-  basescale: 1
+  sphereRB: {fileID: 0}
+  squareRB: {fileID: 0}
+  CapsuleRB: {fileID: 0}
 --- !u!1 &746349669
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,9 +716,9 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1819595420}
-        m_TargetAssemblyTypeName: PlayerInputScript, Assembly-CSharp
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
         m_MethodName: OnKick
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -764,19 +754,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6e27b6c2fd857f42a4accf17d115651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphere: {fileID: 490096071}
-  direction: {x: 0, y: 1, z: 0.5}
-  kickforce: 0
-  minkickforce: 2
-  maxkickforce: 10
-  kickforcechargerate: 0.01
-  Cube: {fileID: 2140493076}
-  movement: {x: 1, y: 1}
-  movespeed: 2
-  moveInput: {x: 0, y: 0}
-  Capsule: {fileID: 746349674}
-  scale: {x: 0, y: 0, z: 0}
-  basescale: 1
+  sphereRB: {fileID: 490096071}
+  squareRB: {fileID: 2140493076}
+  CapsuleRB: {fileID: 746349674}
 --- !u!4 &1819595421
 Transform:
   m_ObjectHideFlags: 0

@@ -9,25 +9,7 @@
                 {
                     "name": "Kick",
                     "type": "Button",
-                    "id": "33fcf08a-9672-4d6b-802a-7c9b02e8b4a4",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Move",
-                    "type": "Value",
-                    "id": "eb61f260-e972-4f23-a7a3-83b8781d8680",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Scale",
-                    "type": "Button",
-                    "id": "086d2173-edc7-402f-958b-b6edb689b0d5",
+                    "id": "8698fd2f-a3d8-4cd7-a03b-81d822d768f8",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -37,89 +19,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "78cb24bb-73af-42bf-8c4e-fb9988cb39e1",
+                    "id": "3416b353-a107-4482-b712-e3ae9a23f372",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Kick",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "2D Vector",
-                    "id": "29f03ade-ac44-40bc-931a-978c89cd3913",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "73021971-a2f9-4778-ba7e-5a21e028e4b6",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "39b14952-6ed3-411b-8fe7-4eb45d40ad2f",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "a05b13dc-3f24-4f16-a2b9-a34c78af4c82",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "a4706087-64e3-480b-a1fe-1880688c7831",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "2728c437-cb24-4ac8-926a-f42377cb0441",
-                    "path": "<Keyboard>/upArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Scale",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "be5c582f-a892-4ba5-86c8-8943f97b2c68",
-                    "path": "<Keyboard>/downArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Scale",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
